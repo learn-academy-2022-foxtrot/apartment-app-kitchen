@@ -64,99 +64,99 @@ RSpec.describe Apartment, type: :model do
     expect(apartment.errors[:manager]).to include "can't be blank"
   end
 
-it "should have a valid email" do
-  apartment = user.apartments.create(
-    street: "123 street",
-    city: "Bikini Bottom",
-    state: "Pacific Ocean",
-    manager: "Mustachio Jones",
-    price: "1000 sand dollars",
-    bedrooms: 2,
-    bathrooms: 2,
-    pets: "yes",
-    image: "https://images.thedailystar.net/sites/default/files/styles/very_big_201/public/feature/images/who_lives_in_a_pineapple_under_the_sea.jpg?itok=iYr37hhG"
-  )
-  apartment.validate
-  expect(apartment.errors[:email]).to include "can't be blank"
-end
+  it "should have a valid email" do
+    apartment = user.apartments.create(
+      street: "123 street",
+      city: "Bikini Bottom",
+      state: "Pacific Ocean",
+      manager: "Mustachio Jones",
+      price: "1000 sand dollars",
+      bedrooms: 2,
+      bathrooms: 2,
+      pets: "yes",
+      image: "https://images.thedailystar.net/sites/default/files/styles/very_big_201/public/feature/images/who_lives_in_a_pineapple_under_the_sea.jpg?itok=iYr37hhG"
+    )
+    apartment.validate
+    expect(apartment.errors[:email]).to include "can't be blank"
+  end
 
-it "should have a valid price" do
-  apartment = user.apartments.create(
-    street: "123 street",
-    city: "Bikini Bottom",
-    state: "Pacific Ocean",
-    manager: "Mustachio Jones",
-    email: "mjones@example.com",
-    bedrooms: 2,
-    bathrooms: 2,
-    pets: "yes",
-    image: "https://images.thedailystar.net/sites/default/files/styles/very_big_201/public/feature/images/who_lives_in_a_pineapple_under_the_sea.jpg?itok=iYr37hhG"
-  )
-  apartment.validate
-  expect(apartment.errors[:price]).to include "can't be blank"
-end
+  it "should have a valid price" do
+    apartment = user.apartments.create(
+      street: "123 street",
+      city: "Bikini Bottom",
+      state: "Pacific Ocean",
+      manager: "Mustachio Jones",
+      email: "mjones@example.com",
+      bedrooms: 2,
+      bathrooms: 2,
+      pets: "yes",
+      image: "https://images.thedailystar.net/sites/default/files/styles/very_big_201/public/feature/images/who_lives_in_a_pineapple_under_the_sea.jpg?itok=iYr37hhG"
+    )
+    apartment.validate
+    expect(apartment.errors[:price]).to include "can't be blank"
+  end
 
-it "should have a valid bedrooms" do
-  apartment = user.apartments.create(
-    street: "123 street",
-    city: "Bikini Bottom",
-    state: "Pacific Ocean",
-    manager: "Mustachio Jones",
-    email: "mjones@example.com",
-    price: "1000 sand dollars",
-    bathrooms: 2,
-    pets: "yes",
-    image: "https://images.thedailystar.net/sites/default/files/styles/very_big_201/public/feature/images/who_lives_in_a_pineapple_under_the_sea.jpg?itok=iYr37hhG"
-  )
-  apartment.validate
-  expect(apartment.errors[:bedrooms]).to include "can't be blank"
-end
+  it "should have a valid bedrooms" do
+    apartment = user.apartments.create(
+      street: "123 street",
+      city: "Bikini Bottom",
+      state: "Pacific Ocean",
+      manager: "Mustachio Jones",
+      email: "mjones@example.com",
+      price: "1000 sand dollars",
+      bathrooms: 2,
+      pets: "yes",
+      image: "https://images.thedailystar.net/sites/default/files/styles/very_big_201/public/feature/images/who_lives_in_a_pineapple_under_the_sea.jpg?itok=iYr37hhG"
+    )
+    apartment.validate
+    expect(apartment.errors[:bedrooms]).to include "can't be blank"
+  end
 
-it "should have a valid bathrooms" do
-  apartment = user.apartments.create(
-    street: "123 street",
-    city: "Bikini Bottom",
-    state: "Pacific Ocean",
-    manager: "Mustachio Jones",
-    email: "mjones@example.com",
-    price: "1000 sand dollars",
-    bedrooms: 2,
-    pets: "yes",
-    image: "https://images.thedailystar.net/sites/default/files/styles/very_big_201/public/feature/images/who_lives_in_a_pineapple_under_the_sea.jpg?itok=iYr37hhG"
-  )
-  apartment.validate
-  expect(apartment.errors[:bathrooms]).to include "can't be blank"
-end
+  it "should have a valid bathrooms" do
+    apartment = user.apartments.create(
+      street: "123 street",
+      city: "Bikini Bottom",
+      state: "Pacific Ocean",
+      manager: "Mustachio Jones",
+      email: "mjones@example.com",
+      price: "1000 sand dollars",
+      bedrooms: 2,
+      pets: "yes",
+      image: "https://images.thedailystar.net/sites/default/files/styles/very_big_201/public/feature/images/who_lives_in_a_pineapple_under_the_sea.jpg?itok=iYr37hhG"
+    )
+    apartment.validate
+    expect(apartment.errors[:bathrooms]).to include "can't be blank"
+  end
 
-it "should have a valid pets" do
-  apartment = user.apartments.create(
-    street: "123 street",
-    city: "Bikini Bottom",
-    state: "Pacific Ocean",
-    manager: "Mustachio Jones",
-    email: "mjones@example.com",
-    price: "1000 sand dollars",
-    bedrooms: 2,
-    bathrooms: 2,
-    image: "https://images.thedailystar.net/sites/default/files/styles/very_big_201/public/feature/images/who_lives_in_a_pineapple_under_the_sea.jpg?itok=iYr37hhG"
-  )
-  apartment.validate
-  expect(apartment.errors[:pets]).to include "can't be blank"
-end
+  it "should have a valid pets" do
+    apartment = user.apartments.create(
+      street: "123 street",
+      city: "Bikini Bottom",
+      state: "Pacific Ocean",
+      manager: "Mustachio Jones",
+      email: "mjones@example.com",
+      price: "1000 sand dollars",
+      bedrooms: 2,
+      bathrooms: 2,
+      image: "https://images.thedailystar.net/sites/default/files/styles/very_big_201/public/feature/images/who_lives_in_a_pineapple_under_the_sea.jpg?itok=iYr37hhG"
+    )
+    apartment.validate
+    expect(apartment.errors[:pets]).to include "can't be blank"
+  end
 
-it "should have a valid image" do
-  apartment = user.apartments.create(
-    street: "123 street",
-    city: "Bikini Bottom",
-    state: "Pacific Ocean",
-    manager: "Mustachio Jones",
-    email: "mjones@example.com",
-    price: "1000 sand dollars",
-    bedrooms: 2,
-    bathrooms: 2,
-    pets: "yes",
-  )
-  apartment.validate
-  expect(apartment.errors[:image]).to include "can't be blank"
-end
+  it "should have a valid image" do
+    apartment = user.apartments.create(
+      street: "123 street",
+      city: "Bikini Bottom",
+      state: "Pacific Ocean",
+      manager: "Mustachio Jones",
+      email: "mjones@example.com",
+      price: "1000 sand dollars",
+      bedrooms: 2,
+      bathrooms: 2,
+      pets: "yes"
+    )
+    apartment.validate
+    expect(apartment.errors[:image]).to include "can't be blank"
+  end
 end
