@@ -4,7 +4,7 @@ RSpec.describe Apartment, type: :model do
   let(:user) { User.create email: "test@example.com", password: "password", password_confirmation: "password" }
 
   it "should have a valid street" do
-    apartment = user.apartments.create(
+    apartment = user.apartments.new(
       city: "Bikini Bottom",
       state: "Pacific Ocean",
       manager: "Mustachio Jones",

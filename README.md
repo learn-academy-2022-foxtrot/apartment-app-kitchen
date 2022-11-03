@@ -207,4 +207,3 @@ MODELS:
 - to ensure a user cannot update an apartment with nil values
 - to ensure a user cannot update another user's apartment
 
-- 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
