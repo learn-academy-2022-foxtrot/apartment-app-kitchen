@@ -68,4 +68,54 @@ RSpec.describe "Apartments", type: :request do
       expect(apartment.image).to eq "https://images.thedailystar.net/sites/default/files/styles/very_big_201/public/feature/images/who_lives_in_a_pineapple_under_the_sea.jpg?itok=iYr37hhG"
     end
   end
+
+  # -----Update-----
+
+  describe "PATCH /update" do 
+    it "updates an apartment" do 
+      apartment_params = {
+        apartment: {
+        street: "123 street",
+        city: "Las Vegas",
+        state: "NV",
+        manager: "Billy Bob",
+        email: "coolguy@gmail.com",
+        price: "2000 euros",
+        bedrooms: 2,
+        bathrooms: 1,
+        pets: "No",
+        image: "https://images.thedailystar.net/sites/default/files/styles/very_big_201/public/feature/images/who_lives_in_a_pineapple_under_the_sea.jpg?itok=iYr37hhG",
+        user_id: user.id
+        }
+    }
+  
+    post '/apartments', params: apartment_params
+      apartment = Apartment.first
+      p "apartment", apartment
+  
+    update_apartment_params = {
+      apartment: {
+      street: "990 Update Street",
+      city: "Las Vegas",
+      state: "NV",
+      manager: "Billy Bob",
+      email: "coolguy@gmail.com",
+      price: "2000 euros",
+      bedrooms: 2,
+      bathrooms: 1,
+      pets: "No",
+      image: "https://images.thedailystar.net/sites/default/files/styles/very_big_201/public/feature/images/who_lives_in_a_pineapple_under_the_sea.jpg?itok=iYr37hhG",
+      user_id: user.id
+      }
+    }
+  
+    put "/apartments/#{apartment.id}", params: update_apartment_params
+    apartment = Apartment.first
+    p "apartment", apartment
+  
+   expect(apartment.street).to eq("990 Update Street")
+      
+    end 
+  end 
+
 end
