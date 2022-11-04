@@ -19,8 +19,8 @@ const App = (props) => {
   }, [])
 
   const createApartment = (apartment) => {
-    console.log(apartment);
-  };
+    console.log(apartment)
+  }
 
   const readApartments = () => {
     fetch("/apartments")
