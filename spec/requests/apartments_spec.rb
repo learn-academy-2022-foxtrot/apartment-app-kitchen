@@ -54,7 +54,6 @@ RSpec.describe "Apartments", type: :request do
 
       post "/apartments", params: apartment_params
       apartments = JSON.parse(response.body)
-      # apartment.validate
       apartment = Apartment.first
       p "apartments are cool:", apartment
       expect(response).to have_http_status(200)
