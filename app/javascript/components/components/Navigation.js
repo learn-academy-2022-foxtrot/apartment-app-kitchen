@@ -26,14 +26,14 @@ const Navigation = ({
           <NavItem>
             <NavLink to="/ApartmentNew" className="nav-link">
             New Apartment
-            </a>
+            </NavLink>
           </NavItem>
         )}
         {logged_in && (
           <NavItem>
             <NavLink to="/ApartmentShow" className="nav-link">
             My Apartment
-            </a>
+            </NavLink>
           </NavItem>
         )}
         {logged_in && (
