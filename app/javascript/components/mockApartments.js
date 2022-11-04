@@ -47,7 +47,7 @@ const apartments = [
     price: 10420,
     bedrooms: 9,
     bathrooms: 6,
-    pets: "yes",
+    pets: "yes/no",
     image: "https://images.zerodown.com/mlsgrid//images/41537489-b4d6-4655-88e1-48cc45d03c01.jpeg"
   }
 ]
