@@ -7,4 +7,13 @@ describe("<ApartmentIndex />", () => {
     const div = document.createElement("div")
     render(<ApartmentIndex />, div)
   })
+
+  it("renders apartment cards", () => {
+    const div = document.createElement("div")
+    render(<ApartmentIndex apartments={mockApartments} />, div)
+    mockApartments.forEach((apartment) => {
+      const apartmentName = screen.getByText(apartment.street)
+      expect(apartmentName).toBeInTheDocument()
+    })
+  })
 })
