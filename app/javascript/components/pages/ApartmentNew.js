@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom"
 const ApartmentNew = ({ createApartment }) => {
     const navigate = useNavigate()
     const [newApartment, setNewApartment] = useState({
-        street:"",
+    	street:"",
         city:"",
         state:"",
         price:"",
