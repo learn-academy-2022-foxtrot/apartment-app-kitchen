@@ -17,7 +17,7 @@ RSpec.describe "Apartments", type: :request do
         bathrooms: 2,
         pets: "yes",
         image: "https://images.thedailystar.net/sites/default/files/styles/very_big_201/public/feature/images/who_lives_in_a_pineapple_under_the_sea.jpg?itok=iYr37hhG",
-        user_id: user.id 
+        user_id: user.id
       )
       apartment.save
       get "/apartments"
@@ -35,7 +35,7 @@ RSpec.describe "Apartments", type: :request do
 
   # -----Create-----
   describe "POST /create" do
-    it "Creates an apartment" do 
+    it "Creates an apartment" do
       apartment_params = {
         apartment: {
           street: "123 street",
