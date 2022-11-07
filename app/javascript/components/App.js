@@ -31,12 +31,6 @@ const App = (props) => {
       })
       .catch((error) => console.log(error))
   }
-  console.log(props)
-
-  // let userProps = {
-  //   apartments: apartments,
-  //   user: props
-  // }
 
   return (
     <BrowserRouter>
