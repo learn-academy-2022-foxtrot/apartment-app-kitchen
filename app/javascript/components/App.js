@@ -19,6 +19,10 @@ const App = (props) => {
     readApartments()
   }, [])
 
+  const createApartment = (apartment) => {
+    console.log(apartment)
+  }
+
   const readApartments = () => {
     fetch("/apartments")
       .then((response) => response.json())
@@ -33,9 +37,10 @@ const App = (props) => {
       <Header {...props} />
       <Routes>
         <Route exact path="/" element={<Home />} />
-        <Route path="/apartmentindex" element={<ApartmentIndex apartments={apartments} />} />
+
+        <Route path="/apartmentindex" element={<ApartmentIndex apartments={apartments} />} />     
         <Route path="/apartmentshow/:id" element={<ApartmentShow apartments={apartments} />} />
-        <Route path="/apartmentnew" element={<ApartmentNew />} />
+        <Route path="/apartmentnew" element={<ApartmentNew createApartment={createApartment}/>} />
         <Route path="/apartmentedit" element={<ApartmentEdit />} />
         <Route element={<NotFound />} />
       </Routes>
