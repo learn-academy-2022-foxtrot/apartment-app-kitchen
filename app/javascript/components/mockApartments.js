@@ -37,6 +37,18 @@ const apartments = [
     pets: "yes",
     image:
       "https://upload.wikimedia.org/wikipedia/en/c/ca/742_Evergreen_Terrace.png"
+  },
+  {
+    street: "8842 Hilltop Boulevard",
+    city: "Los Angeles",
+    state: "California",
+    manager: "Mr. Nakamoto",
+    email: "guandoge@chan.com",
+    price: 10420,
+    bedrooms: 9,
+    bathrooms: 6,
+    pets: "yes/no",
+    image: "https://images.zerodown.com/mlsgrid//images/41537489-b4d6-4655-88e1-48cc45d03c01.jpeg"
   }
 ]
 
