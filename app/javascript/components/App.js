@@ -17,6 +17,7 @@ const App = (props) => {
 
   useEffect(() => {
     readApartments()
+
   }, [])
 
   const createApartment = (apartment) => {
@@ -32,13 +33,21 @@ const App = (props) => {
       .catch((error) => console.log(error))
   }
 
+  const deleteListing = (id) => {
+    console.log(id)
+    fetch(`/apartments/${id}`,{ method:'DELETE' })
+    .then((response) => response.json())
+    .then(() => readApartments())
+    .catch((errors) => console.log(errors))
+  }
+  
   return (
     <BrowserRouter>
       <Header {...props} />
       <Routes>
         <Route exact path="/" element={<Home />} />
         <Route path="/apartmentindex" element={<ApartmentIndex />} />
-        <Route path="/apartmentprotectedindex" element={<ProtectedApartmentIndex apartments = {apartments} {...props} />} />
+        <Route path="/apartmentprotectedindex" element={<ProtectedApartmentIndex apartments = {apartments} {...props} deleteListing={deleteListing} />} />
         <Route path="/apartmentshow/:id" element={<ApartmentShow apartments={apartments} />} />
         <Route path="/apartmentnew" element={<ApartmentNew createApartment={createApartment}/>} />
         <Route path="/apartmentedit" element={<ApartmentEdit />} />
