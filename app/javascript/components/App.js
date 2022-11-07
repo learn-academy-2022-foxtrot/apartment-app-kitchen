@@ -15,7 +15,6 @@ import mockApartments from "./mockApartments"
 
 import ProtectedApartmentIndex from "./pages/ProtectedApartmentIndex"
 
-
 const App = (props) => {
   const [apartments, setApartments] = useState(mockApartments)
 
@@ -41,7 +40,7 @@ const App = (props) => {
       <Header {...props} />
       <Routes>
         <Route exact path="/" element={<Home />} />
-        <Route path="/apartmentindex" element={<ApartmentIndex apartments={apartments} />} />            
+        <Route path="/apartmentindex" element={<ApartmentIndex apartments={apartments} />} />
         <Route path="/apartmentprotectedindex" element={<ProtectedApartmentIndex apartments = {apartments} {...props} />} />
         <Route path="/apartmentshow/:id" element={<ApartmentShow apartments={apartments} />} />
         <Route path="/apartmentnew" element={<ApartmentNew createApartment={createApartment}/>} />

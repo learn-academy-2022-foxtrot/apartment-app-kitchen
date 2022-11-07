@@ -1,5 +1,5 @@
 import React from "react"
-import { Card, CardBody, CardTitle, CardText, CardLink, ListGroup, ListGroupItem } from "reactstrap"
+import { Card, CardBody, CardTitle, CardSubtitle, Button } from "reactstrap"
 
 const ApartmentIndex = ({ apartments }) => {
   return (
