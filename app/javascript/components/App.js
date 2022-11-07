@@ -17,7 +17,6 @@ const App = (props) => {
 
   useEffect(() => {
     readApartments()
-
   }, [])
 
   const createApartment = (apartment) => {
@@ -35,12 +34,12 @@ const App = (props) => {
 
   const deleteListing = (id) => {
     console.log(id)
-    fetch(`/apartments/${id}`,{ method:'DELETE' })
-    .then((response) => response.json())
-    .then(() => readApartments())
-    .catch((errors) => console.log(errors))
+    fetch(`/apartments/${id}`, { method: "DELETE" })
+      .then((response) => response.json())
+      .then(() => readApartments())
+      .catch((errors) => console.log(errors))
   }
-  
+
   return (
     <BrowserRouter>
       <Header {...props} />

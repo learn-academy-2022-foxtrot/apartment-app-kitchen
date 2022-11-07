@@ -1,8 +1,7 @@
 import React from "react"
 import { Button, Card, CardBody, CardTitle, CardText, CardLink, ListGroup, ListGroupItem } from "reactstrap"
 
-const ProtectedApartmentIndex = ({ apartments, current_user, deleteListing}) => {
-
+const ProtectedApartmentIndex = ({ apartments, current_user, deleteListing }) => {
   const currentUserApt = apartments?.filter(item => item.user_id === current_user.id)
 
   console.log(currentUserApt)
