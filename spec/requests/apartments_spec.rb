@@ -117,7 +117,7 @@ RSpec.describe "Apartments", type: :request do
     end
   end
 
-  # -----Update-----
+  # -----Delete-----
 
   describe "DELETE /destroys" do
     it "deletes an apartment" do
