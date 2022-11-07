@@ -1,4 +1,4 @@
-user = User.where(email: "test@example.com").first_or_create(password: "password", password_confirmation: "password")
+user = User.where(email: "guandoge@chan.com").first_or_create(password: "123password", password_confirmation: "123password")
 
 apartment_seeds = [
   {
@@ -36,6 +36,18 @@ apartment_seeds = [
     bathrooms: 2,
     pets: "yes",
     image: "https://upload.wikimedia.org/wikipedia/en/c/ca/742_Evergreen_Terrace.png"
+  },
+  {
+    street: "8842 Hilltop Boulevard",
+    city: "Los Angeles",
+    state: "California",
+    manager: "Mr. Nakamoto",
+    email: "guandoge@chan.com",
+    price: 10420,
+    bedrooms: 9,
+    bathrooms: 6,
+    pets: "yes/no",
+    image: "https://images.zerodown.com/mlsgrid//images/41537489-b4d6-4655-88e1-48cc45d03c01.jpeg"
   }
 ]
 

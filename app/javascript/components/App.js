@@ -10,6 +10,7 @@ import ApartmentNew from "./pages/ApartmentNew"
 import ApartmentShow from "./pages/ApartmentShow"
 import Home from "./pages/Home"
 import NotFound from "./pages/NotFound"
+import ProtectedApartmentIndex from "./pages/ProtectedApartmentIndex"
 
 const App = (props) => {
   const [apartments, setApartments] = useState([])
@@ -26,6 +27,12 @@ const App = (props) => {
       })
       .catch((error) => console.log(error))
   }
+  console.log(props)
+
+  // let userProps = {
+  //   apartments: apartments,
+  //   user: props
+  // }
 
   return (
     <BrowserRouter>
@@ -33,6 +40,7 @@ const App = (props) => {
       <Routes>
         <Route exact path="/" element={<Home />} />
         <Route path="/apartmentindex" element={<ApartmentIndex />} />
+        <Route path="/apartmentprotectedindex" element={<ProtectedApartmentIndex apartments = {apartments} {...props} />} />
         <Route path="/apartmentshow" element={<ApartmentShow />} />
         <Route path="/apartmentnew" element={<ApartmentNew />} />
         <Route path="/apartmentedit" element={<ApartmentEdit />} />
