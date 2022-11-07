@@ -13,15 +13,15 @@ describe("<ApartmentShow />", () => {
     )
     expect(screen.getByText("Apartment Show")).toBeInTheDocument()
   })
-    // it("NavLink exists", () => {
-    //   render(
-    //     <MemoryRouter initialEntries={["/apartmentindex"]}>
-    //       <Routes>
-    //         <Route path="/apartmentindex" element={<ApartmentShow apartments={ mockApartments }/>} />
-    //       </Routes>
-    //     </MemoryRouter>
-    //   )
-    //   const navLink = screen.getByText("Back to all Apartments")
-    //   expect(navLink).toBeInTheDocument()
-    // })
-  })
+  // it("NavLink exists", () => {
+  //   render(
+  //     <MemoryRouter initialEntries={["/apartmentindex"]}>
+  //       <Routes>
+  //         <Route path="/apartmentindex" element={<ApartmentShow apartments={ mockApartments }/>} />
+  //       </Routes>
+  //     </MemoryRouter>
+  //   )
+  //   const navLink = screen.getByText("Back to all Apartments")
+  //   expect(navLink).toBeInTheDocument()
+  // })
+})
