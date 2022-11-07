@@ -1,6 +1,7 @@
 import React from "react"
-import { render } from "@testing-library/react"
+import { render, screen } from "@testing-library/react"
 import ApartmentIndex from "./ApartmentIndex"
+import mockApartments from "../mockApartments"
 
 describe("<ApartmentIndex />", () => {
   it("renders without crashing", () => {

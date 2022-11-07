@@ -207,3 +207,26 @@ MODELS:
 - to ensure a user cannot update an apartment with nil values
 - to ensure a user cannot update another user's apartment
 
+## Extra Code
+- ApartmentIndex
+```javascript
+      {apartments?.map((apartment, index) => {
+        return(
+            <Card 
+              style={{ 
+                width: '18 rem'
+              }}
+              key = {index}
+            >
+              <img alt={`profile of an apartment ${apartment.street}`} src={apartment.image} />
+              <CardBody>
+                {/* <NavLink to={`/apartmentshow/${apartment.id}`} className="nav-link">
+                  See More Details
+                </NavLink> */}
+                
+              </CardBody>
+            </Card>
+        )
+      })}
+
+```

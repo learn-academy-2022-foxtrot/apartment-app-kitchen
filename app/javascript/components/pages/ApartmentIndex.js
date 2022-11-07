@@ -1,35 +1,38 @@
 import React from "react"
-import {Card, CardBody, CardTitle, Button, CardSubtitle } from "reactstrap"
+import { Card, CardBody, CardTitle, CardSubtitle, Button } from "reactstrap"
 
-const ApartmentIndex = ({apartments}) => {
-  // console.log(apartments)
+const ApartmentIndex = ({ apartments }) => {
   return (
-    <main>
-      <h1>Apartment Index!</h1>
-      {apartments?.map((apartment, index) => {
-        return(
-          <>
-            <Card 
-              style={{ 
-                width: '18 rem'
+    <>
+      <h3>ApartmentIndex</h3>
+      {
+        apartments?.map((apartment, index) => {
+          return (
+            <Card
+              style={{
+                width: "14rem"
               }}
-              key = {index}
+              key={index}
             >
-              <img alt={`profile of an apartment`} src={apartment.image} />
+              <img alt={`image of apartment in ${apartment.state}`} src={apartment.image} />
               <CardBody>
-                <CardTitle tag="h5">{apartment.street},{apartment.city},{apartment.state}</CardTitle>
+                <CardTitle tag="h5">{`$${apartment.price}/month`}</CardTitle>
                 <CardSubtitle className="mb-2 text-muted" tag="h6">
-                  Price: {apartment.price}
-                  Bathrooms: {apartment.bathrooms}
-                  Bedrooms: {apartment.bedrooms}
+                  Beds: {apartment.bedrooms}
+                </CardSubtitle>
+                <CardSubtitle className="mb-2 text-muted" tag="h6">
+                  Baths: {apartment.bathrooms}
+                </CardSubtitle>
+                <CardSubtitle className="mb-2 text-muted" tag="h6">
+                  Location: {`${apartment.street}, ${apartment.city}, ${apartment.state}`}
                 </CardSubtitle>
                 <Button>See More Details</Button>
               </CardBody>
             </Card>
-          </>
-        )
-      })}
-    </main>
+          )
+        })
+      }
+    </>
   )
 }
 

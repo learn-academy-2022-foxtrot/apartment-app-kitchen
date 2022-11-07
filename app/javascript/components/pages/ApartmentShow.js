@@ -5,8 +5,8 @@ const ApartmentShow = ({apartments}) => {
   // console.log(apartments)
   const { id } = useParams()
   // console.log(id)
-  let showApartment = apartments?.find(apartment => apartment.id === +id)
-  console.log(showApartment)
+  let currentApartment = apartments?.find((apartment) => apartment.id === +id)
+  console.log(currentApartment)
 
 
   return (
