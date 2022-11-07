@@ -17,6 +17,6 @@ describe("<ApartmentIndex />", () => {
     // mockApartments.forEach((apartment) => {
     //   const apartmentName = screen.getByText(apartment.street)
     //   expect(apartmentName).toBeInTheDocument()
-    })
   })
+})
 // })

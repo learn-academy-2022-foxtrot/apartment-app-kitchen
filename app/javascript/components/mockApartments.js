@@ -5,7 +5,7 @@ const apartments = [
     state: "Surrey",
     manager: "Mr. Potter",
     email: "potter@example.com",
-    price:" 2000",
+    price: " 2000",
     bedrooms: 3,
     bathrooms: 2,
     pets: "yes",
