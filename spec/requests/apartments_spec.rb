@@ -137,12 +137,11 @@ RSpec.describe "Apartments", type: :request do
         }
       }
 
-     post "/apartments", params: apartment_params
-     apartment = Apartment.first
-     delete "/apartments/#{apartment.id}"
-     expect(response).to have_http_status(200)
+      post "/apartments", params: apartment_params
+      apartment = Apartment.first
+      delete "/apartments/#{apartment.id}"
+      expect(response).to have_http_status(200)
     end
   end
-
 
 end
